@@ -33,4 +33,30 @@ class simple_calcUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testAdd(){
+        
+    }
+    func testSubtract(){
+        
+    }
+    func testMultiply(){
+        
+    }
+    func testDivide(){
+        
+    }
+    func testMOD(){
+        
+    }
+    func testFACT(){
+        
+    }
+    func testAVG(){
+        
+    }
+    func testCOUNT(){
+        
+    }
+    
+    
 }
