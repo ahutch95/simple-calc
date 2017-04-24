@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     weak var calculationsBar: UILabel!
     let operands = ["+", "-", "*", "/", "%", "COUNT", "AVG", "FACT"]
-    
+    var history = Array<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
