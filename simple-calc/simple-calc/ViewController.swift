@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     weak var calculationsBar: UILabel!
     let operands = ["+", "-", "*", "/", "%", "COUNT", "AVG", "FACT"]
-    var history = Array<String>()
-    
     
     
     override func viewDidLoad() {
@@ -25,6 +23,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func historyButton(_ sender: UIButton) {
+        
+    }
     @IBAction func digitInput(_ sender: UIButton) {
         let value = sender.currentTitle!
         if (calculationsBar.text?.contains("e"))! {
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func enterButton(_ sender: UIButton) {
-        let operation = calculationsBar.text
+        var operation = calculationsBar.text
         var input = operation?.components(separatedBy: " ")
         if (operation?.contains("e"))! {
             calculationsBar.text = "Please put in an operation to perform"
@@ -50,9 +51,9 @@ class ViewController: UIViewController {
         }
         let response = input?[0]
         if input!.contains("COUNT"){
-            
-            calculationsBar.text = ("Result: \((input!.count / 2) + 1)")
-            
+            let result = (input!.count / 2) + 1
+            calculationsBar.text = ("Result: \(result)")
+            operation! += " = " + String(result)
         } else if input!.contains("AVG") {
             var sum = 0;
             var numNums = 0;
@@ -62,15 +63,16 @@ class ViewController: UIViewController {
                     numNums += 1
                 }
             }
-            calculationsBar.text = ("Result: \(Double(sum) / Double(numNums))")
-            
+            let result = Double(sum) / Double(numNums)
+            calculationsBar.text = ("Result: \(result)")
+            operation! += " = " + String(result)
         } else if input!.contains("FACT") {
             var factorial = 1;
             for i in 1...Int(input![0])!{
                 factorial *= i
             }
             calculationsBar.text = ("Result: \(factorial)")
-            
+            operation! += " = " + String(factorial)
         } else {
             let response2 = (input?[1])!
             let response3 = Double( (input?[2])! )
@@ -78,22 +80,27 @@ class ViewController: UIViewController {
             if response2 == "+"  {
                 let result = Double(response!)! + response3!
                 calculationsBar.text = ("Result: \(result)")
+                operation! += " = " + String(result)
             } else if response2 == "-" {
                 let result = Double(response!)! - response3!
                 calculationsBar.text = ("Result: \(result)")
+                operation! += " = " + String(result)
             } else if response2 == "*" {
                 let result = Double(response!)! * response3!
                 calculationsBar.text = ("Result: \(result)")
+                operation! += " = " + String(result)
             } else if response2 == "/" {
                 let result = Double(response!)! / response3!
                 calculationsBar.text = ("Result: \(result)")
+                operation! += " = " + String(result)
             } else if response2 == "%" {
                 let result = Double(response!)!.truncatingRemainder(dividingBy: response3!)
                 calculationsBar.text = ("Result: \(result)")
+                operation! += " = " + String(result)
             } else {
                 calculationsBar.text = ("That is not a supported operand. Please try again with these options (+, -, *, /, %, count, avg, fact)")
             }
-    
+            ResultsArray.resultsArray.append(operation!)
         }
     }
     

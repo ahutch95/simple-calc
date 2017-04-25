@@ -14,6 +14,8 @@
 		402176AF1EA4A88200B53D20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402176AD1EA4A88200B53D20 /* LaunchScreen.storyboard */; };
 		402176BA1EA4A88200B53D20 /* simple_calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402176B91EA4A88200B53D20 /* simple_calcTests.swift */; };
 		402176C51EA4A88200B53D20 /* simple_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402176C41EA4A88200B53D20 /* simple_calcUITests.swift */; };
+		9D4C3B3C1EAEDF8000A4AD6E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C3B3B1EAEDF8000A4AD6E /* HistoryTableViewController.swift */; };
+		9D4C3B401EAEE52A00A4AD6E /* ResultsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C3B3F1EAEE52A00A4AD6E /* ResultsArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		402176C01EA4A88200B53D20 /* simple-calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402176C41EA4A88200B53D20 /* simple_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calcUITests.swift; sourceTree = "<group>"; };
 		402176C61EA4A88200B53D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4C3B3B1EAEDF8000A4AD6E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		9D4C3B3F1EAEE52A00A4AD6E /* ResultsArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				402176AB1EA4A88200B53D20 /* Assets.xcassets */,
 				402176AD1EA4A88200B53D20 /* LaunchScreen.storyboard */,
 				402176B01EA4A88200B53D20 /* Info.plist */,
+				9D4C3B3B1EAEDF8000A4AD6E /* HistoryTableViewController.swift */,
+				9D4C3B3F1EAEE52A00A4AD6E /* ResultsArray.swift */,
 			);
 			path = "simple-calc";
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 			files = (
 				402176A71EA4A88200B53D20 /* ViewController.swift in Sources */,
 				402176A51EA4A88200B53D20 /* AppDelegate.swift in Sources */,
+				9D4C3B401EAEE52A00A4AD6E /* ResultsArray.swift in Sources */,
+				9D4C3B3C1EAEDF8000A4AD6E /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +513,7 @@
 				402176CB1EA4A88200B53D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		402176CC1EA4A88200B53D20 /* Build configuration list for PBXNativeTarget "simple-calcTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				402176CE1EA4A88200B53D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		402176CF1EA4A88200B53D20 /* Build configuration list for PBXNativeTarget "simple-calcUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				402176D11EA4A88200B53D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
